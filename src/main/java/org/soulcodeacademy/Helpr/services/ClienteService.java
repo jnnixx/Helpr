@@ -30,9 +30,8 @@ public class ClienteService {
     }
 
     public Cliente salvar(ClienteDTO dto){
-      Cliente cliente = new Cliente(null, dto.getNome(), dto.getEmail(), dto.getCpf(), dto.getSenha(), dto.getTelefone());
-      Cliente clienteSalvo = this.clienteRepository.save(cliente);
-      return clienteSalvo;
+      Cliente novoCliente = new Cliente(null, dto.getNome(), dto.getEmail(), dto.getCpf(), dto.getSenha(), dto.getTelefone());
+      return this.clienteRepository.save(novoCliente);
     }
 
     public Cliente atualizar(Integer idCliente, ClienteDTO dto){
@@ -53,3 +52,6 @@ public class ClienteService {
     }
 
 }
+//Quando usar entidade e dto?
+//Entidade = Usa no retorno dos dados
+//DTO = entrada de dados

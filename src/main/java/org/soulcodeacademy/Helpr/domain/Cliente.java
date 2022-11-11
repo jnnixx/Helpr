@@ -2,13 +2,15 @@ package org.soulcodeacademy.Helpr.domain;
 
 import org.soulcodeacademy.Helpr.domain.enums.Perfil;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Size;
 
+//Verifica os dados inseridos de cliente
 @Entity
 public class Cliente extends Usuario{
 
-    @Size(min = 8, max = 11)
+    @Column(length = 25) //varchar(25)
     private String telefone;
 
     public Cliente(){

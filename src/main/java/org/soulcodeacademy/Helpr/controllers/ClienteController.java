@@ -43,4 +43,7 @@ public Cliente atualizar(@PathVariable Integer idCliente, @Valid @RequestBody Cl
 
 }
 
+//Deserializar -> converte o JSON para Classe
+//Serializar -> converte Classe para JSON
+
 

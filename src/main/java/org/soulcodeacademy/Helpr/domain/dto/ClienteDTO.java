@@ -1,9 +1,10 @@
 package org.soulcodeacademy.Helpr.domain.dto;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class ClienteDTO extends UsuarioDTO{
-    @NotNull(message = "Telefone é obrigatório")
+    @NotBlank(message = "Telefone é obrigatório")
     private String telefone;
 
     public String getTelefone() {
@@ -14,3 +15,5 @@ public class ClienteDTO extends UsuarioDTO{
         this.telefone = telefone;
     }
 }
+//@NotNull => verifica se tem valor ou nao (objetos, integer, double ...)
+//@NotBlank => verifica se o telefone está "" (string)
