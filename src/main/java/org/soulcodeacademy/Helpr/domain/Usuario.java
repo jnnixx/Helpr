@@ -1,5 +1,6 @@
 package org.soulcodeacademy.Helpr.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.soulcodeacademy.Helpr.domain.enums.Perfil;
 
 import javax.persistence.*;
@@ -16,6 +17,8 @@ public abstract class Usuario { //não sera possivel criar objetos dessa classe
     protected  String email;
     @Column(nullable = false, unique = true, length = 11)
     protected  String cpf;
+
+    @JsonIgnore
     @Column(nullable = false)
     protected  String senha;
     //Representa os valores do ENUM como texto

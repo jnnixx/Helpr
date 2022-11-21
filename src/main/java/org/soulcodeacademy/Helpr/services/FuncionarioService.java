@@ -6,9 +6,9 @@ import org.soulcodeacademy.Helpr.domain.Funcionario;
 import org.soulcodeacademy.Helpr.domain.dto.CargoDTO;
 import org.soulcodeacademy.Helpr.domain.dto.FuncionarioDTO;
 import org.soulcodeacademy.Helpr.domain.enums.Perfil;
-import org.soulcodeacademy.Helpr.repositories.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.soulcodeacademy.Helpr.repositories.FuncionarioRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,6 +24,10 @@ public class FuncionarioService {
     // Lista todos
     public List<Funcionario> Listar(){
         return  this.funcionarioRepository.findAll();
+    }
+
+    public List<Funcionario> listarPorFaixaSalarial(Double valor1,Double valor2 ){
+        return this.funcionarioRepository.findBySalarioEntreFaixas(valor1, valor2);
     }
 
     public  Funcionario getFuncionario(Integer idFuncionario){

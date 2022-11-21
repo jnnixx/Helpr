@@ -5,6 +5,7 @@ import org.hibernate.id.IntegralDataTypeHolder;
 import org.soulcodeacademy.Helpr.domain.Cargo;
 import org.soulcodeacademy.Helpr.domain.dto.CargoDTO;
 import org.soulcodeacademy.Helpr.repositories.CargoRepository;
+import org.soulcodeacademy.Helpr.repositories.CargoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
